@@ -17,4 +17,12 @@
 </svelte:head>
 
 <NavbarMobile />
-{@render children?.()}
+<main>
+	{@render children?.()}
+</main>
+
+<style>
+	main {
+		padding-top: 235px;
+	}
+</style>

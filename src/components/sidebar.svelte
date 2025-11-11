@@ -4,8 +4,15 @@
 	import Logo from './logo.svelte';
 	import { clickOutside } from '../utils/utils';
 
+	let treatment = $state<'home' | 'treatments' | 'advanced' | 'aesthetics' | 'beauty'>('beauty');
 	let { isActive, closeSidebar, menuButtonRef, asideRef } = $props();
 </script>
+
+{#snippet link(link: string, title: string)}
+	<a class="aside-link" onclick={closeSidebar} href={link}>{title}</a>
+{/snippet}
+
+{@render link('/', 'Home')}
 
 {#if isActive}
 	<aside
@@ -14,54 +21,57 @@
 		out:fly={{ x: -600, duration: 500 }}
 		use:clickOutside={{ enabled: isActive, callback: closeSidebar, exclude: [menuButtonRef] }}
 	>
-		<div class="title-wrapper">
+		<a class="title-wrapper" href="/" onclick={closeSidebar}>
 			<Logo />
-		</div>
+		</a>
 		<div class="main">
 			<hr />
-			<a class="aside-link" href="/">Home</a>
-			<button class="aside-link">Treatments</button>
-			<a class="aside-link" href="/about">About us</a>
-			<a class="aside-link" href="/gallery">Gallery</a>
-			<a class="aside-link" href="/contact">Contact</a>
-			<LinkButton href="/" aria="Book your appointment now" />
-			<!-- <a class="aside-link book-button" href="/" aria-label="">BOOK NOW</a> -->
-		</div>
+			<div class:hidden={treatment !== 'home'}>
+				{@render link('/', 'Home')}
+				<button class="aside-link" class:hidden={treatment !== 'home'}>Treatments</button>
+				{@render link('/about', 'About us')}
+				{@render link('/gallery', 'Gallery')}
+				{@render link('/contact', 'Contact')}
+			</div>
+			<div class="treatments" class:hidden={treatment !== 'treatments'}>
+				<button class="aside-link" aria-label="back"></button>
+				<button class="aside-link">Advanced skincare</button>
+				<button class="aside-link">Aesthetics </button>
+				<button class="aside-link">Beauty </button>
+			</div>
 
-		<!-- <div class="treatments">
-			<button aria-label="back"></button>
-			<button>Advanced skincare</button>
-			<button>Aesthetics </button>
-			<button>Beauty </button>
-		</div>
+			<div class="advanced" class:hidden={treatment !== 'advanced'}>
+				{@render link('/facials', 'Facials')}
+				{@render link('/dermaplaning', 'Dermaplaning')}
+			</div>
+			<div class="aesthetics" class:hidden={treatment !== 'aesthetics'}>
+				{@render link('/anti-wrinkle-injections', 'Anti-wrinkle Injections')}
+				{@render link('/dermal-filler', 'Dermal Filler')}
+				{@render link('/skin-boosters', 'Skin Boosters')}
+				{@render link('/polynucleotides', 'Polynucleotides')}
+			</div>
+			<div class="beauty" class:hidden={treatment !== 'beauty'}>
+				{@render link('/lash-lifts-and-tints', 'Lash lifts & tints')}
+				{@render link('/waxing-and-hair-removal', 'Waxing & hair removal')}
+			</div>
 
-		<div id="advanced">
-			<a href="/facials">Facials</a>
-			<a href="/dermaplaning">Dermaplaning</a>
+			<div class="link-button">
+				<LinkButton href="/" aria="Book your appointment now" />
+			</div>
 		</div>
-		<div id="aesthetics">
-			<a href="/anti-wrinkle-injections">Anti-wrinkle Injections</a>
-			<a href="/dermal-filler">Dermal Filler</a>
-			<a href="/skin-boosters">Skin Boosters</a>
-			<a href="/polynucleotides">Polynucleotides</a>
-		</div>
-		<div id="beauty">
-			<a href="/lash-lifts-and-tints">Lash lifts & tints</a>
-			<a href="/waxing-and-hair-removal">Waxing & hair removal</a>
-		</div> -->
 	</aside>
 {/if}
 
 <style>
-	.main * {
-		display: flex;
-		flex-direction: column;
-	}
-
 	.main {
 		display: flex;
 		flex-direction: column;
-		flex-shrink: 0;
+		justify-content: space-between;
+		flex: 1;
+		height: 100%;
+		padding: 0 1rem;
+		box-sizing: border-box;
+		position: relative;
 	}
 
 	.title-wrapper {
@@ -81,6 +91,9 @@
 		padding-top: 36px;
 		background-color: #fff;
 		z-index: 10;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.5s;
 	}
 	aside.active {
 		left: 0px;
@@ -97,15 +110,30 @@
 	}
 
 	.aside-link {
-		align-items: first baseline;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 		padding-left: 25dvw;
 		height: 70px;
-		justify-content: center;
+		text-decoration: none;
+		color: inherit;
 	}
 
 	hr {
 		border: none;
 		height: 2px;
 		background-color: #ede3d9;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.link-button {
+		margin-top: auto;
+		margin-left: 0;
+		padding: 1rem 0;
+		display: flex;
+		justify-content: center;
 	}
 </style>
