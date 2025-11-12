@@ -3,16 +3,35 @@
 	import LinkButton from './link-button.svelte';
 	import Logo from './logo.svelte';
 	import { clickOutside } from '../utils/utils';
+	import type { MouseEventHandler } from 'svelte/elements';
 
-	let treatment = $state<'home' | 'treatments' | 'advanced' | 'aesthetics' | 'beauty'>('beauty');
+	type Treatment = 'home' | 'treatments' | 'advanced' | 'aesthetics' | 'beauty';
+
+	let treatment = $state<Treatment>('home');
 	let { isActive, closeSidebar, menuButtonRef, asideRef } = $props();
+
+	const closeAndNavigate = () => {
+		closeSidebar();
+		treatment = 'home';
+	};
 </script>
 
 {#snippet link(link: string, title: string)}
 	<a class="aside-link" onclick={closeSidebar} href={link}>{title}</a>
 {/snippet}
 
-{@render link('/', 'Home')}
+{#snippet backButton(location: Treatment)}
+	<button class="aside-link backbutton" onclick={() => (treatment = location)} aria-label="back">
+		<svg xmlns="http://www.w3.org/2000/svg" width="9" height="17" viewBox="0 0 9 17" fill="none">
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M8.99868 15.938L7.95367 17L0.287675 9.21C0.103176 9.0197 0 8.76505 0 8.5C0 8.23495 0.103176 7.9803 0.287675 7.79L7.95367 0L8.99868 1.063L1.68067 8.5L8.99868 15.938Z"
+				fill="#5B4C3F"
+			/>
+		</svg>
+	</button>
+{/snippet}
 
 {#if isActive}
 	<aside
@@ -21,36 +40,50 @@
 		out:fly={{ x: -600, duration: 500 }}
 		use:clickOutside={{ enabled: isActive, callback: closeSidebar, exclude: [menuButtonRef] }}
 	>
-		<a class="title-wrapper" href="/" onclick={closeSidebar}>
+		<a class="title-wrapper" href="/" onclick={closeAndNavigate}>
 			<Logo />
 		</a>
 		<div class="main">
 			<hr />
 			<div class:hidden={treatment !== 'home'}>
 				{@render link('/', 'Home')}
-				<button class="aside-link" class:hidden={treatment !== 'home'}>Treatments</button>
+				<button
+					class="aside-link"
+					class:hidden={treatment !== 'home'}
+					onclick={() => (treatment = 'treatments')}>Treatments</button
+				>
 				{@render link('/about', 'About us')}
 				{@render link('/gallery', 'Gallery')}
 				{@render link('/contact', 'Contact')}
 			</div>
+
 			<div class="treatments" class:hidden={treatment !== 'treatments'}>
-				<button class="aside-link" aria-label="back"></button>
-				<button class="aside-link">Advanced skincare</button>
-				<button class="aside-link">Aesthetics </button>
-				<button class="aside-link">Beauty </button>
+				{@render backButton('home')}
+				<h2 class="menu-header">Treatments</h2>
+				<button onclick={() => (treatment = 'advanced')} class="aside-link"
+					>Advanced skincare</button
+				>
+				<button class="aside-link" onclick={() => (treatment = 'aesthetics')}>Aesthetics</button>
+				<button class="aside-link" onclick={() => (treatment = 'beauty')}>Beauty</button>
 			</div>
 
 			<div class="advanced" class:hidden={treatment !== 'advanced'}>
+				{@render backButton('treatments')}
+				<h2 class="menu-header">Advanced Skincare</h2>
 				{@render link('/facials', 'Facials')}
 				{@render link('/dermaplaning', 'Dermaplaning')}
 			</div>
 			<div class="aesthetics" class:hidden={treatment !== 'aesthetics'}>
+				{@render backButton('treatments')}
+				<h2 class="menu-header">Aesthetics</h2>
 				{@render link('/anti-wrinkle-injections', 'Anti-wrinkle Injections')}
 				{@render link('/dermal-filler', 'Dermal Filler')}
 				{@render link('/skin-boosters', 'Skin Boosters')}
 				{@render link('/polynucleotides', 'Polynucleotides')}
 			</div>
 			<div class="beauty" class:hidden={treatment !== 'beauty'}>
+				{@render backButton('treatments')}
+				<h2 class="menu-header">Beauty</h2>
 				{@render link('/lash-lifts-and-tints', 'Lash lifts & tints')}
 				{@render link('/waxing-and-hair-removal', 'Waxing & hair removal')}
 			</div>
@@ -94,26 +127,17 @@
 		display: flex;
 		flex-direction: column;
 		transition: all 0.5s;
+		border-bottom-right-radius: 40px;
 	}
 	aside.active {
 		left: 0px;
-	}
-	aside::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 10%;
-		height: 100%;
-		background-color: #ede3d9;
-		border-bottom-right-radius: 40px;
 	}
 
 	.aside-link {
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		padding-left: 25dvw;
+		padding: 18px 0px 17px 82px;
 		height: 70px;
 		text-decoration: none;
 		color: inherit;
@@ -135,5 +159,22 @@
 		padding: 1rem 0;
 		display: flex;
 		justify-content: center;
+	}
+
+	.menu-header {
+		color: #5b4c3f;
+		padding: 18px 0px 17px 82px;
+		font-family: Raleway;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		text-decoration-line: underline;
+	}
+
+	.backbutton {
+		position: absolute;
+		z-index: 2;
+		padding: 0 20px 0;
 	}
 </style>
