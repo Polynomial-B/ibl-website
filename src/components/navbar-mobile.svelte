@@ -27,7 +27,7 @@
 
 <style>
 	nav {
-		position: fixed;
+		position: sticky;
 		width: 100vw;
 		height: 235px;
 		z-index: 4;
