@@ -99,7 +99,18 @@
 </footer>
 
 <style>
+	h2::before {
+		content: '';
+		background: #e7ccae;
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		width: 100vw;
+		height: 1px;
+		transform: translateX(-50%);
+	}
 	h2 {
+		position: relative;
 		font-family: 'Noto Serif Display', serif;
 		letter-spacing: -0.44px;
 		color: #5b4c3f;
@@ -113,7 +124,7 @@
 
 	footer {
 		width: 100%;
-		padding: 40px 20px;
+		padding: 40px 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -128,12 +139,12 @@
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
-		width: 250px;
+		width: 90%;
 	}
 
 	.subscribe input {
-		border: 1px solid #819e80;
-		padding: 10px;
+		border: 1px solid #bbb;
+		padding: 15px;
 		font-size: 1rem;
 		font-family: 'Raleway', sans-serif;
 		color: #bbb;
