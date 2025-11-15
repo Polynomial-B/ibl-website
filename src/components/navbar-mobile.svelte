@@ -27,14 +27,15 @@
 
 <style>
 	nav {
-		position: sticky;
-		width: 100vw;
+		position: relative;
+		width: 100%;
 		height: 235px;
 		z-index: 4;
 		background-color: #faf5ef;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+		overflow: hidden;
 	}
 
 	.title-wrapper {

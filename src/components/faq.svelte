@@ -1,20 +1,20 @@
 <script lang="ts">
-	let { p1, p2, p3 } = $props();
+	let { prep, post, results } = $props();
 </script>
 
 <section>
 	<h2>FAQs</h2>
 	<details name="faq">
 		<summary>How should I prepare for my treatment?</summary>
-		<p>{p1}</p>
+		<p>{prep}</p>
 	</details>
 	<details name="faq">
 		<summary>What should I do post-treatment?</summary>
-		<p>{p2}</p>
+		<p>{post}</p>
 	</details>
 	<details name="faq">
 		<summary>When will I see results?</summary>
-		<p>{p3}</p>
+		<p>{results}</p>
 	</details>
 </section>
 
@@ -76,5 +76,14 @@
 		color: #555;
 		font-size: 15px;
 		line-height: 1.4;
+	}
+
+	details p {
+		color: #a2a2a3;
+		font-family: 'Inter', sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 300;
+		line-height: 166%;
 	}
 </style>

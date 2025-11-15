@@ -45,7 +45,11 @@
 
 <Imagebody src="src/public/images/eyebrows-body.png" alt="tinted eyebrows" />
 
-<Faq p1="" p2="" p3="" />
+<Faq
+	prep="If it’s your first time having a lash or brow tint, you’ll need a patch test at least 24 hours prior to your appointment. On the day, arrive with clean lashes and brows, free from makeup or oils, and avoid waterproof mascara for 24 hours beforehand."
+	post="Keep lashes and brows dry for 24 hours and avoid steam, heavy creams, or rubbing the area. After that, follow your usual routine; for lash lifts, using a lash conditioner is always advised to keep the lashes hydrated and healthy."
+	results="Immediately! Enjoy lifted, defined lashes and polished brows straight after your appointment, lasting up to 6 weeks."
+/>
 
 <Footer />
 
