@@ -11,7 +11,7 @@
 	.splash {
 		padding: 50px 10px;
 		position: relative;
-		height: 550px;
+		height: 450px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -20,7 +20,7 @@
 	.splash img.main {
 		position: relative;
 		z-index: 2;
-		height: 439px;
+		height: 350px;
 	}
 
 	.splash img.bg {

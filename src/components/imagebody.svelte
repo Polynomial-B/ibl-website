@@ -17,6 +17,7 @@
 
 	.book {
 		display: inline-block;
+		position: relative;
 		color: white;
 		padding: 10px 20px;
 		border: 2px solid #2ecc71;
@@ -28,6 +29,7 @@
 		background: #819e80;
 		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.17);
 		margin-bottom: 40px;
+		z-index: 2;
 	}
 
 	.main {
