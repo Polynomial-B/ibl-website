@@ -51,8 +51,6 @@
 	results="Immediately! Enjoy lifted, defined lashes and polished brows straight after your appointment, lasting up to 6 weeks."
 />
 
-<Footer />
-
 <style>
 	h1 {
 		padding-right: 40px;

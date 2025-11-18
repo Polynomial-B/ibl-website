@@ -28,5 +28,3 @@
 	post="Avoid heat (saunas, hot baths), direct sun exposure, and active skincare (such as retinoids or acids) for 24–48 hours. Exfoliate gently a few days after your appointment to help prevent ingrown hairs and keep skin moisturised."
 	results="You may notice your skin feels fresher and more hydrated after a single facial, but the most visible, lasting improvements come from a course of treatments. For targeted skin concerns such as pigmentation, fine lines, or congestion, I recommend a series of 4–6 facials spaced 2–4 weeks apart. This allows the active ingredients —  including professional-strength peels where suitable — to build on the results of each previous session, delivering healthier, clearer, and more radiant skin over time."
 />
-
-<Footer />

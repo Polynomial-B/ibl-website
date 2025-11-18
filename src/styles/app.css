@@ -62,6 +62,10 @@ h2 {
 	font-family: 'Noto Serif Display', serif;
 	color: #5b4c3f;
 }
+h4 {
+	font-family: 'Raleyway', sans-serif;
+	text-decoration: underline;
+}
 h1 {
 	text-align: right;
 	padding: 0 12px;
@@ -85,7 +89,8 @@ h2 {
 	padding: 10px 0;
 }
 
-p {
+p,
+article {
 	padding: 10px 0;
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;

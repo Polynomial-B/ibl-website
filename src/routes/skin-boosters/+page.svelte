@@ -51,5 +51,3 @@
 	post="Avoid touching the treated area for the first few hours. You may notice small bumps or mild redness at the injection sites — this is normal and usually subsides within a couple of days. Avoid makeup for 12 hours, and hold off on exercise, saunas, or sunbeds for 24–48 hours."
 	results="Most clients begin to notice a healthier, more hydrated look within about 1 week, with full results developing over 2–4 weeks as collagen production increases. For the best and longest-lasting results, a course of 3 treatments spaced 4 weeks apart is recommended. With the full course, results can last around 6–8 months before a maintenance session is needed."
 />
-
-<Footer />

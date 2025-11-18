@@ -52,5 +52,3 @@
 	post="Follow any specific aftercare given for your skin type. Avoid heat treatments and direct sun exposure for 24–48 hours. Always apply SPF daily."
 	results="You’ll notice visible improvement after just one treatment, with skin appearing more hydrated, radiant, and with a smoother texture. For best results, a course of facials is recommended. Results generally last around 4–6 weeks, although this can vary depending on your individual hair growth cycle and skin condition."
 />
-
-<Footer />

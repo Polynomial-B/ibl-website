@@ -48,5 +48,3 @@
 	post="Avoid touching or applying pressure to the treated areas for the first 24 hours. Refrain from strenuous exercise, heat exposure (such as saunas or sunbeds), and alcohol for at least 24 hours, as these can increase swelling or bruising. Avoid facial treatments or massages in the treated areas for 2 weeks. Mild swelling or small bruises are normal and should settle within a few days. Keep the area clean and avoid makeup for 12 hours, especially around injection points."
 	results="Results from dermal filler are visible immediately, but the final result becomes clearer over the next 5–7 days as any swelling settles. The treated area may initially feel slightly firm or tender- this is completely normal and will soften as the filler integrates with your natural tissue. "
 />
-
-<Footer />

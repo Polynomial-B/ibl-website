@@ -43,5 +43,3 @@
 	post="After the procedure, avoid touching or massaging the treated areas and keep your head upright for at least 4 hours to prevent the product from migrating. Refrain from strenuous exercise, bending, lifting, facials, or face-down massages for 24 hours. Avoid makeup for 4 hours, and when reapplying, use clean brushes or sponges. Mild bumps or welts at the injection site are normal-avoid touching them. Gentle facial movements can help the product settle and absorb effectively."
 	results="Immediately! Enjoy smooth, hair-free skin straight after your appointment. Regrowth usually appears after 4–6 weeks, although on rare occasions some people may notice hair growth sooner — everyone’s hair growth cycle is different. With regular treatments, hair typically becomes finer and softer over time."
 />
-
-<Footer />

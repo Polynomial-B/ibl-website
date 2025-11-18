@@ -1,5 +1,6 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
+	import Footer from '../components/footer.svelte';
 	import NavbarMobile from '../components/navbar-mobile.svelte';
 	import '../styles/app.css';
 
@@ -32,6 +33,7 @@
 <main>
 	{@render children?.()}
 </main>
+<Footer />
 
 <style>
 </style>

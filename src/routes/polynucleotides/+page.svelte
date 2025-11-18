@@ -53,5 +53,3 @@
 	post="Avoid touching the treated area for the first few hours. You may notice small bumps or mild redness at the injection sites - this is normal and usually subsides within a couple of days. Avoid makeup for 12 hours, and hold off on exercise, saunas, or sunbeds for 24–48 hours."
 	results="Results develop gradually over 4–6 weeks as your skin begins to regenerate at a deeper level. Unlike fillers, there’s no instant volume or plumpness, but also no risk of overfilling. Most clients require three sessions, 3 weeks apart, to achieve optimal results, with maintenance sessions every 6 months. Expect smoother texture, improved elasticity, and a refreshed, firmer-looking complexion that keeps getting better over time."
 />
-
-<Footer />

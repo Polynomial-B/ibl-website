@@ -47,5 +47,3 @@
 	post="After the procedure, avoid touching or massaging the treated areas and keep your head upright for at least 4 hours to prevent the product from migrating. Refrain from strenuous exercise, bending, lifting, facials, or face-down massages for 24 hours. Avoid makeup for 4 hours, and when reapplying, use clean brushes or sponges. Mild bumps or welts at the injection site are normal-avoid touching them. Gentle facial movements can help the product settle and absorb effectively."
 	results="You may start to notice subtle changes within 3–5 days, but full results typically develop around 10–14 days after treatment. In some cases, a top-up may be required to achieve the desired result. Everyone’s response to Botox is slightly different, as factors such as individual muscle activity and how quickly your body metabolises the product can affect how soon you see results and how long they last."
 />
-
-<Footer />
