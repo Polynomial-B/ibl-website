@@ -89,7 +89,7 @@
 			</div>
 
 			<div class="link-button">
-				<LinkButton href="/" aria="Book your appointment now" />
+				<LinkButton text="BOOK NOW" />
 			</div>
 		</div>
 	</aside>

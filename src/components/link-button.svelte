@@ -1,25 +1,28 @@
 <script lang="ts">
-	let { href, aria } = $props();
+	let { text } = $props();
 </script>
 
-<a class="aside-link book-button" {href} aria-label={aria}>BOOK NOW</a>
+<a
+	class="aside-link book-button"
+	href="https://www.fresha.com/a/insidebeautylondon-shepperton-ashford-13-chessholme-road-th8rk3em"
+	aria-label="book now via Fresha">{text}</a
+>
 
 <style>
 	.book-button {
-		padding: 12px;
-		border: 1px solid #fff;
-		border-radius: 10px;
-		background: rgba(255, 200, 144, 0.49);
-		font-size: 1rem;
+		display: inline-block;
+		position: relative;
+		color: white;
+		padding: 10px 20px;
+		border: 2px solid #2ecc71;
 		cursor: pointer;
-		text-decoration: none;
-		width: 147px;
-		height: 46px;
-		color: #4d4d4d;
+		margin-bottom: 20px;
 		font-size: 15px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-		text-align: center;
+		font-weight: 600;
+		border: 1px solid #fff;
+		background: #819e80;
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+		margin-bottom: 40px;
+		z-index: 2;
 	}
 </style>
