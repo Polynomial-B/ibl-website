@@ -76,8 +76,7 @@
 		z-index: 2;
 		height: 350px;
 		background: lightgray 50% / cover no-repeat;
-		border-bottom-right-radius: 46%;
-		border-bottom-left-radius: 46%;
+		border-radius: 0 0 150px 150px;
 		border: 2px solid white;
 	}
 

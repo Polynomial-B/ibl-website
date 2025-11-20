@@ -21,6 +21,7 @@
 		position: relative;
 		z-index: 2;
 		height: 350px;
+		border-radius: 150px 150px 0 0;
 	}
 
 	.splash img.bg {

@@ -3,7 +3,6 @@
 	import LinkButton from './link-button.svelte';
 	import Logo from './logo.svelte';
 	import { clickOutside } from '../utils/utils';
-	import type { MouseEventHandler } from 'svelte/elements';
 
 	type Treatment = 'home' | 'treatments' | 'advanced' | 'aesthetics' | 'beauty';
 
