@@ -100,8 +100,7 @@
 		margin: 0 auto;
 		position: relative;
 		z-index: 2;
-		border-top-left-radius: 50%;
-		border-top-right-radius: 50%;
+		border-radius: 150px 150px 0 0;
 	}
 
 	.bg-body {

@@ -44,6 +44,7 @@
 		display: flex;
 		justify-content: center;
 		align-content: flex-end;
+		flex-grow: 0;
 	}
 
 	.menu-icon {
