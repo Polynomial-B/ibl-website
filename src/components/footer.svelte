@@ -11,7 +11,10 @@
 	</div>
 
 	<div class="icons">
-		<a class="icon" href="/" aria-label="Follow us on Instagram"
+		<a
+			class="icon"
+			href="https://www.instagram.com/insidebeautylondon/"
+			aria-label="Follow us on Instagram"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="48"

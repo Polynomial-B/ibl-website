@@ -7,7 +7,7 @@
 	<img class="bg" src="src/public/images/about-circles.png" alt="dotted brown circle underlay" />
 </section>
 
-<section>
+<section class="section-two">
 	<h2>Experience results-driven skincare, aesthetics and beauty designed for every complexion.</h2>
 	<div class="img-wrapper">
 		<div class="img-item">
@@ -77,5 +77,9 @@
 		font-size: 16px;
 		line-height: normal;
 		letter-spacing: -0.304px;
+		text-align: left;
+	}
+	.section-two {
+		text-align: center;
 	}
 </style>

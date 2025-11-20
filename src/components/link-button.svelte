@@ -16,7 +16,6 @@
 		padding: 10px 20px;
 		border: 2px solid #2ecc71;
 		cursor: pointer;
-		margin-bottom: 20px;
 		font-size: 15px;
 		font-weight: 600;
 		border: 1px solid #fff;
