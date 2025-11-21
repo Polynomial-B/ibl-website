@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/anti-wrinkle.png" alt="syringe and ampules on white background" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>refresh. smooth. rejuvenate.</h2>
 	<p>
 		Anti-wrinkle injections designed to reduce the appearance of fine lines and expression wrinkles.
 		These lines often form through repeated facial movements - like frowning, squinting, or raising

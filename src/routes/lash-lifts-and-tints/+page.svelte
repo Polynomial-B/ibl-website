@@ -1,6 +1,5 @@
 <script>
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/eyebrows.png" alt="eyebrow being tinted" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>shape. define. enhance.</h2>
 	<p>
 		A lash lift is a semi-permanent treatment that enhances your natural lashes by lifting and
 		curling them from the root, giving the appearance of longer, lifted lashes without the need for

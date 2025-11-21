@@ -42,7 +42,7 @@
 		cursor: pointer;
 		font-size: 16px;
 		color: #7f9680;
-		font-weight: 500;
+		font-weight: 600;
 		position: relative;
 	}
 
@@ -83,7 +83,7 @@
 		font-family: 'Inter', sans-serif;
 		font-size: 14px;
 		font-style: normal;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 166%;
 	}
 </style>

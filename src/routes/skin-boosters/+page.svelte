@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/skin-booster.png" alt="water droplets on turquoise background" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>hydrate & illuminate.</h2>
 	<p>
 		Skin boosters are injectable treatments that hydrate the skin at a deep level while improving
 		elasticity, tone and overall texture. Unlike dermal fillers, they don’t add volume; instead,

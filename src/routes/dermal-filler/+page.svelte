@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/dermal-filler.png" alt="syringe on white background" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>restore. rebalance. enhance.</h2>
 	<p>
 		Dermal fillers are injectable treatments that restore lost volume, define facial contours, and
 		smooth deeper lines caused by ageing or changes in facial structure. Over time, collagen,

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/waxing.png" alt="pink wax close-up" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>hair-free. care-free.</h2>
 	<p>
 		Waxing is a semi-permanent hair removal method that lifts hair from the root, leaving your skin
 		smoother for weeks.

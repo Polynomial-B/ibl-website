@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/dermaplaning.png" alt="peach with dermaplane blade" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>Instant glow. ultra-smooth skin.</h2>
 	<p>
 		Dermaplaning is a professional exfoliation treatment that removes dead skin cells and fine
 		vellus hair (“peach fuzz”) using a sterile, surgical-grade blade. This instantly reveals

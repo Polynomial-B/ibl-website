@@ -3,7 +3,11 @@
 </script>
 
 <section class="splash">
-	<img class="main" src="src/public/images/main-splash.png" alt="" />
+	<img
+		class="main"
+		src="src/public/images/main-splash.png"
+		alt="person receiving rose facial treatment"
+	/>
 	<img class="bg" src="src/public/images/about-circles.png" alt="dotted brown circle underlay" />
 </section>
 

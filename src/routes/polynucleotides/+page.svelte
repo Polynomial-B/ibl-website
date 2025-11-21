@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Faq from '../../components/faq.svelte';
-	import Footer from '../../components/footer.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
 </script>
@@ -10,7 +9,7 @@
 <Splash src="src/public/images/polynucleotides.png" alt="syringe on peach background" />
 
 <section>
-	<h2>WHAT IS IT?</h2>
+	<h2>regenerate & restore.</h2>
 	<p>
 		Polynucleotides are a cutting-edge, non-filler injectable treatment that regenerate the skin at
 		a cellular level. Unlike traditional skin boosters or dermal fillers, polynucleotides don’t just

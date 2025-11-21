@@ -38,7 +38,7 @@
 				/>
 			</svg></a
 		>
-		<a class="icon" href="/" aria-label="Email us"
+		<a class="icon" href="mailto:insidebeautylondon@gmail.com" aria-label="Email us"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="48"
