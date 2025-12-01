@@ -1,4 +1,6 @@
 <script>
+	import Carousel from '../components/carousel.svelte';
+	import HomeImages from '../components/home-images.svelte';
 	import LinkButton from '../components/link-button.svelte';
 </script>
 
@@ -29,6 +31,8 @@
 	</div>
 	<LinkButton text="MAKE AN APPOINTMENT" />
 </section>
+
+<HomeImages />
 
 <style>
 	.splash {
@@ -85,5 +89,9 @@
 	}
 	.section-two {
 		text-align: center;
+	}
+
+	h2 {
+		text-transform: none;
 	}
 </style>

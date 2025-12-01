@@ -53,3 +53,86 @@
 		background-color: #ede3d9;
 	}
 </style> -->
+
+<script lang="ts">
+	// Local component state
+	let { isOpen } = $state({ isOpen: false });
+
+	function toggleMenu() {
+		isOpen = !isOpen;
+	}
+
+	function closeMenu() {
+		isOpen = false;
+	}
+</script>
+
+<nav class="menu" onclick_outside={closeMenu}>
+	<ul class="menu-list">
+		<li class="menu-item">Home</li>
+		<li class="menu-item">About</li>
+		<li class="menu-item treatments">
+			<button class="menu-button" onclick={toggleMenu}> Treatments </button>
+			{#if isOpen}
+				<ul class="submenu">
+					<li class="submenu-item">Facial</li>
+					<li class="submenu-item">Massage</li>
+					<li class="submenu-item">Body Treatment</li>
+				</ul>
+			{/if}
+		</li>
+		<li class="menu-item">Contact</li>
+	</ul>
+</nav>
+
+<style>
+	.menu {
+		background-color: #fff;
+		padding: 1rem 2rem;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+		font-family: sans-serif;
+	}
+
+	.menu-list {
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu-item {
+		position: relative;
+	}
+
+	.menu-button {
+		background: none;
+		border: none;
+		font-size: 1rem;
+		cursor: pointer;
+		padding: 0;
+	}
+
+	.submenu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: white;
+		border: 1px solid #ddd;
+		list-style: none;
+		margin: 0;
+		padding: 0.5rem 0;
+		min-width: 150px;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+		z-index: 100;
+	}
+
+	.submenu-item {
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+	}
+
+	.submenu-item:hover {
+		background-color: #f5f5f5;
+	}
+</style>

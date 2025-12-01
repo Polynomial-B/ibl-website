@@ -1,5 +1,4 @@
 <script>
-	// Props
 	let { images } = $props();
 
 	let index = $state(0);
