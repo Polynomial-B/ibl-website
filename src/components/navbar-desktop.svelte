@@ -1,138 +1,150 @@
-<!-- <script lang="ts">
+<script lang="ts">
+	import { clickOutside } from '../utils/utils';
+	import LinkButton from './link-button.svelte';
+	import Logo from './logo.svelte';
+
 	let open = $state(false);
-	let menuLevel = $state<'main' | 'treatments' | 'skincare' | 'aesthetics' | 'beauty'>('main');
-	const onclick = () => (open = !open);
-	const handleDropdownFocusLoss = ({ relatedTarget, currentTarget }) => {
-		if (relatedTarget instanceof HTMLElement && currentTarget.contains(relatedTarget)) return;
+
+	function close() {
 		open = false;
-	};
+	}
+
+	let menuBtn = $state<HTMLElement>(undefined!);
+	let dropdown = $state<HTMLElement>(undefined!);
 </script>
 
-<nav>
-	<a href="/"><img src="src/public/images/logo.png" aria-label="home" alt="half mandala logo" /></a>
-	<div class="main">
-		<hr />
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<button {onclick} onfocusout={handleDropdownFocusLoss}>Treatments</button>
-		<a href="/gallery">Gallery</a>
-		<a href="/contact">Contact</a>
-		<a href="/">Book Now</a>
+<nav class="navbar">
+	<div class="logo">
+		<a href="/"
+			><img
+				src="src/public/images/logo.png"
+				aria-label="home"
+				alt="half mandala logo"
+				class="logo-small"
+			/></a
+		>
 	</div>
 
+	<ul class="nav">
+		<li><a href="/about">About</a></li>
+
+		<li
+			class="treatments-submenu {open ? 'treatments-open' : ''}"
+			bind:this={menuBtn}
+			use:clickOutside={{
+				enabled: true,
+				callback: close,
+				exclude: [menuBtn, dropdown]
+			}}
+		>
+			<button class="treatments-btn" onclick={() => (open = !open)}> Treatments </button>
+		</li>
+		<li><a href="/gallery">Gallery</a></li>
+		<li><a href="/contact">Contact</a></li>
+	</ul>
+	<div class="book">
+		<LinkButton text="BOOK NOW" />
+	</div>
 	{#if open}
-		<div class="treatments">
-			advanced skincare
-			<a href="/facials">Facials</a>
-			<a href="/dermaplaning">Dermaplaning</a>
-			aesthetics
-			<a href="/anti-wrinkle-injections">Anti-wrinkle Injections</a>
-			<a href="/dermal-filler">Dermal Filler</a>
-			<a href="/skin-boosters">Skin Boosters</a>
-			<a href="/polynucleotides">Polynucleotides</a>
-			beauty
-			<a href="/lash-lifts-and-tints">Lash lifts & tints</a>
-			<a href="/waxing-and-hair-removal">Waxing & hair removal</a>
+		<div class="submenu" bind:this={dropdown}>
+			<div class="col">
+				<Logo />
+			</div>
+			<div class="col">
+				<h4>Advanced Skincare</h4>
+				<a href="/facials">Facials</a>
+				<a href="/dermaplaning">Dermaplaning</a>
+			</div>
+
+			<div class="col">
+				<h4>Aesthetics</h4>
+				<a href="/anti-wrinkle">Anti-wrinkle injections</a>
+				<a href="/dermal-filler">Dermal filler</a>
+				<a href="/skin-boosters">Skin boosters</a>
+				<a href="/polynucleotides">Polynucleotides</a>
+			</div>
+
+			<div class="col">
+				<h4>Beauty</h4>
+				<a href="/lash-lift">Lash lifts, brows & tints</a>
+				<a href="/waxing">Waxing & hair removal</a>
+			</div>
 		</div>
 	{/if}
 </nav>
 
 <style>
-	.main * {
+	.navbar {
 		display: flex;
-		flex-direction: column;
-	}
-	nav {
-		background-color: #ffffff;
-		height: 100vh;
-		width: 90vw;
-	}
-	hr {
-		border: none;
-		height: 2px;
-		background-color: #ede3d9;
-	}
-</style> -->
-
-<script lang="ts">
-	// Local component state
-	let { isOpen } = $state({ isOpen: false });
-
-	function toggleMenu() {
-		isOpen = !isOpen;
-	}
-
-	function closeMenu() {
-		isOpen = false;
-	}
-</script>
-
-<nav class="menu" onclick_outside={closeMenu}>
-	<ul class="menu-list">
-		<li class="menu-item">Home</li>
-		<li class="menu-item">About</li>
-		<li class="menu-item treatments">
-			<button class="menu-button" onclick={toggleMenu}> Treatments </button>
-			{#if isOpen}
-				<ul class="submenu">
-					<li class="submenu-item">Facial</li>
-					<li class="submenu-item">Massage</li>
-					<li class="submenu-item">Body Treatment</li>
-				</ul>
-			{/if}
-		</li>
-		<li class="menu-item">Contact</li>
-	</ul>
-</nav>
-
-<style>
-	.menu {
+		align-items: center;
+		justify-content: space-between;
+		padding: 24px 40px;
+		position: fixed;
+		height: 84px;
 		background-color: #fff;
-		padding: 1rem 2rem;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-		font-family: sans-serif;
+		width: 100vw;
+		left: 0;
+		top: 0;
+		right: 0;
+		z-index: 5;
 	}
 
-	.menu-list {
+	ul.nav {
 		display: flex;
-		gap: 2rem;
+		align-items: center;
+		gap: 32px;
 		list-style: none;
-		margin: 0;
-		padding: 0;
 	}
 
-	.menu-item {
+	.treatments-submenu {
 		position: relative;
 	}
 
-	.menu-button {
+	.treatments-btn {
 		background: none;
 		border: none;
-		font-size: 1rem;
+		font: inherit;
 		cursor: pointer;
-		padding: 0;
+	}
+
+	.treatments-open::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 60px;
+		bottom: -10px;
+		height: 2px;
+		background-color: #e7ccae;
+		margin-left: 24px;
 	}
 
 	.submenu {
 		position: absolute;
-		top: 100%;
+		top: 80px;
 		left: 0;
-		background: white;
-		border: 1px solid #ddd;
-		list-style: none;
-		margin: 0;
-		padding: 0.5rem 0;
-		min-width: 150px;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-		z-index: 100;
+		display: flex;
+		justify-content: center;
+		gap: 40px;
+		padding: 32px 40px;
+		background: #fff;
+		box-shadow: 0 12px 0 rgba(0, 0, 0, 0.006);
+		z-index: 5;
+		width: 100vw;
+		margin-left: 50%;
+		transform: translateX(-50%);
 	}
 
-	.submenu-item {
-		padding: 0.5rem 1rem;
-		cursor: pointer;
+	.submenu .col {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 
-	.submenu-item:hover {
-		background-color: #f5f5f5;
+	.logo-small {
+		height: 68px;
+	}
+
+	.book {
+		margin-top: 36px;
 	}
 </style>
