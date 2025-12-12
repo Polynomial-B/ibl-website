@@ -51,13 +51,13 @@
 				<Logo />
 			</div>
 			<div class="col">
-				<h4>Advanced Skincare</h4>
+				<h4>ADVANCED SKINCARE</h4>
 				<a href="/facials">Facials</a>
 				<a href="/dermaplaning">Dermaplaning</a>
 			</div>
 
 			<div class="col">
-				<h4>Aesthetics</h4>
+				<h4>AESTHETICS</h4>
 				<a href="/anti-wrinkle">Anti-wrinkle injections</a>
 				<a href="/dermal-filler">Dermal filler</a>
 				<a href="/skin-boosters">Skin boosters</a>
@@ -65,10 +65,11 @@
 			</div>
 
 			<div class="col">
-				<h4>Beauty</h4>
+				<h4>BEAUTY</h4>
 				<a href="/lash-lift">Lash lifts, brows & tints</a>
 				<a href="/waxing">Waxing & hair removal</a>
 			</div>
+			<div class="col"></div>
 		</div>
 	{/if}
 </nav>
@@ -132,12 +133,21 @@
 		width: 100vw;
 		margin-left: 50%;
 		transform: translateX(-50%);
+		font-size: 15px;
+	}
+
+	h4 {
+		color: #666060;
+		text-decoration: none;
+		font-weight: 600;
+		letter-spacing: -0.12px;
 	}
 
 	.submenu .col {
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
+		min-width: 100px;
 	}
 
 	.logo-small {
