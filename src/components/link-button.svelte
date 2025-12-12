@@ -23,5 +23,7 @@
 		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 		margin-bottom: 40px;
 		z-index: 2;
+		width: fit-content;
+		text-align: center;
 	}
 </style>
