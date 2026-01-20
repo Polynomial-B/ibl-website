@@ -55,4 +55,9 @@
 		cursor: pointer;
 		z-index: 11;
 	}
+	@media (min-width: 768px) {
+		nav {
+			display: none;
+		}
+	}
 </style>

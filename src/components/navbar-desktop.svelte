@@ -13,7 +13,7 @@
 	let dropdown = $state<HTMLElement>(undefined!);
 </script>
 
-<nav class="navbar">
+<nav>
 	<div class="logo">
 		<a href="/"
 			><img
@@ -75,18 +75,18 @@
 </nav>
 
 <style>
-	.navbar {
+	nav {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 84px;
+		padding: 24px 40px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 24px 40px;
-		position: fixed;
-		height: 84px;
 		background-color: #fff;
-		width: 100vw;
-		left: 0;
-		top: 0;
-		right: 0;
 		z-index: 5;
 	}
 
@@ -123,6 +123,8 @@
 		position: absolute;
 		top: 80px;
 		left: 0;
+		right: 0;
+		width: 100%;
 		display: flex;
 		justify-content: center;
 		gap: 40px;
@@ -130,9 +132,6 @@
 		background: #fff;
 		box-shadow: 0 12px 0 rgba(0, 0, 0, 0.006);
 		z-index: 5;
-		width: 100vw;
-		margin-left: 50%;
-		transform: translateX(-50%);
 		font-size: 15px;
 	}
 
@@ -156,5 +155,11 @@
 
 	.book {
 		margin-top: 36px;
+	}
+
+	@media (max-width: 768px) {
+		nav {
+			display: none;
+		}
 	}
 </style>

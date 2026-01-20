@@ -33,6 +33,14 @@
 </section>
 
 <HomeImages />
+<Carousel
+	images={[
+		'src/public/images/home-carousel-1.png',
+		'src/public/images/home-carousel-2.png',
+		'src/public/images/home-carousel-3.png',
+		'src/public/images/home-carousel-4.png'
+	]}
+/>
 
 <style>
 	.splash {

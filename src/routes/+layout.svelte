@@ -1,6 +1,7 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import Footer from '../components/footer.svelte';
+	import NavbarDesktop from '../components/navbar-desktop.svelte';
 	import NavbarMobile from '../components/navbar-mobile.svelte';
 	import '../styles/app.css';
 
@@ -30,7 +31,8 @@
 </svelte:head>
 
 <NavbarMobile />
-<main>
+<NavbarDesktop />
+<main class="page">
 	{@render children?.()}
 </main>
 <Footer />
