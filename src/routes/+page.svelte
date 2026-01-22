@@ -5,11 +5,31 @@
 </script>
 
 <section class="splash">
+	<div class="desktop">
+		<div class="desktop-side">
+			<h1>
+				Science-backed<br />
+				skincare,<br />
+				<span>for</span> lasting beauty.
+			</h1>
+			<div class="link-container">
+				<LinkButton text="MAKE AN APPOINTMENT" />
+			</div>
+		</div>
+		<div class="desktop-img-container">
+			<img
+				class="main desktop"
+				src="src/public/images/main-splash-desktop.png"
+				alt="person receiving rose facial treatment"
+			/>
+		</div>
+	</div>
 	<img
-		class="main"
+		class="main mobile"
 		src="src/public/images/main-splash.png"
 		alt="person receiving rose facial treatment"
 	/>
+
 	<img class="bg" src="src/public/images/about-circles.png" alt="dotted brown circle underlay" />
 </section>
 
@@ -101,5 +121,61 @@
 
 	h2 {
 		text-transform: none;
+	}
+	.desktop {
+		height: 600px;
+		display: flex;
+		margin: 0 auto;
+	}
+
+	.desktop-side {
+		/* position: absolute;
+		left: 0; */
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		justify-content: center;
+	}
+
+	.desktop-img-container {
+		/* position: absolute;
+		display: block;
+		right: -16px;
+		top: -22px; */
+		width: clamp(40vw, 50vw, 60vw);
+		height: 100%;
+		overflow: hidden;
+	}
+	.link-container {
+		margin: 0 auto;
+	}
+	@media (min-width: 768px) {
+		.mobile {
+			display: none;
+		}
+
+		.splash {
+			display: flex;
+			margin: 0 auto;
+		}
+		.splash img.bg {
+			position: absolute;
+			top: 0;
+			left: -66px;
+			z-index: 1;
+			pointer-events: none;
+			transform: rotateY(0deg);
+		}
+		.main {
+			position: relative;
+		}
+		h2 {
+			max-width: 400px;
+		}
+	}
+	@media (max-width: 768px) {
+		.desktop {
+			display: none;
+		}
 	}
 </style>

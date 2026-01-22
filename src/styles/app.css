@@ -1,5 +1,6 @@
 :root {
 	--body-colour: #645242;
+	--navbar-height: 84px;
 }
 
 /*  RESET  */
@@ -106,4 +107,10 @@ article {
 
 section {
 	padding: 0 0 10px;
+}
+
+@media (min-width: 768px) {
+	.page {
+		padding-top: calc(var(--navbar-height) + 20px);
+	}
 }

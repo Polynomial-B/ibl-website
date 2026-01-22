@@ -106,4 +106,14 @@
 		top: 133px;
 		left: -15px;
 	}
+
+	@media (min-width: 1024px) {
+		section {
+			flex-direction: row;
+			gap: 0px;
+		}
+		.container {
+			padding: 0;
+		}
+	}
 </style>

@@ -50,6 +50,10 @@
 	ontouchmove={onPointerMove}
 	ontouchend={onPointerUp}
 >
+	<button class="arrow left" onclick={prev} aria-label="Previous image"> ‹ </button>
+
+	<button class="arrow right" onclick={next} aria-label="Next image"> › </button>
+
 	<div
 		class="track"
 		style="transform: translateX(calc(-{index * 100}% + {dragging ? currentX : 0}px));"
@@ -79,6 +83,7 @@
 		width: 100%;
 		height: 469px;
 		touch-action: pan-y;
+		height: 469px;
 	}
 
 	.track {
@@ -90,6 +95,9 @@
 	.slide {
 		min-width: 100%;
 		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	img {
@@ -117,5 +125,60 @@
 
 	.dot.active {
 		background: #333;
+	}
+
+	.arrow {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.carousel {
+			height: auto;
+			max-height: 994px;
+		}
+
+		.slide {
+			max-width: 1438px;
+			margin: 0 auto;
+		}
+
+		img {
+			max-width: 1438px;
+			max-height: 994px;
+			object-fit: cover;
+		}
+		.arrow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			border: none;
+
+			background: rgba(255, 255, 255, 0.9);
+			color: #111;
+			font-size: 28px;
+			cursor: pointer;
+			z-index: 2;
+
+			transition:
+				background 0.2s,
+				transform 0.2s;
+		}
+
+		.arrow:hover {
+			background: white;
+			transform: translateY(-50%) scale(1.05);
+		}
+
+		.arrow.left {
+			left: 16px;
+		}
 	}
 </style>
