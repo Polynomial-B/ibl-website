@@ -34,7 +34,9 @@
 </section>
 
 <section class="section-two">
-	<h2>Experience results-driven skincare, aesthetics and beauty designed for every complexion.</h2>
+	<h2>
+		Experience results-driven skincare, aesthetics and beaut<br /> designed for every complexion.
+	</h2>
 	<div class="img-wrapper">
 		<div class="img-item">
 			<img src="src/public/images/homeicon-science.svg" alt="" />
@@ -49,7 +51,9 @@
 			<div>Promoting skincare and self-confidence</div>
 		</div>
 	</div>
-	<LinkButton text="MAKE AN APPOINTMENT" />
+	<div class="link-container__section-two">
+		<LinkButton text="MAKE AN APPOINTMENT" />
+	</div>
 </section>
 
 <HomeImages />
@@ -95,6 +99,7 @@
 		gap: 50px;
 		margin: 2rem auto;
 		padding: 0 30px;
+		max-width: 1000px;
 	}
 
 	.img-item {
@@ -169,8 +174,19 @@
 		.main {
 			position: relative;
 		}
-		h2 {
-			max-width: 400px;
+
+		.section-two {
+			margin-left: -20px;
+			margin-right: -20px;
+			background-color: white;
+			margin-bottom: 50px;
+			padding: 40px 0;
+		}
+		.img-wrapper {
+			flex-direction: row;
+		}
+		.link-container__section-two {
+			display: none;
 		}
 	}
 	@media (max-width: 768px) {

@@ -115,5 +115,8 @@
 		.container {
 			padding: 0;
 		}
+		.bg-middle {
+			display: none;
+		}
 	}
 </style>
