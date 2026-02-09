@@ -40,59 +40,55 @@
 	}
 </script>
 
-<section>
-	<h2>Whatever your skin needs, we've got the facial for it.</h2>
-	<div
-		class="carousel"
-		onpointerdown={onPointerDown}
-		onpointermove={onPointerMove}
-		onpointerup={onPointerUp}
-		onpointerleave={onPointerUp}
+<div
+	class="carousel"
+	onpointerdown={onPointerDown}
+	onpointermove={onPointerMove}
+	onpointerup={onPointerUp}
+	onpointerleave={onPointerUp}
+>
+	<button class="arrow left" onclick={prev} aria-label="Previous image"
+		><img
+			src="src/public/images/home-carousel-arrow-left.svg"
+			alt="left arrow"
+			aria-label="previous image"
+		/></button
 	>
-		<button class="arrow left" onclick={prev} aria-label="Previous image"
-			><img
-				src="src/public/images/home-carousel-arrow-left.svg"
-				alt="left arrow"
-				aria-label="previous image"
-			/></button
-		>
 
-		<button class="arrow right" onclick={next} aria-label="Next image"
-			><img
-				src="src/public/images/home-carousel-arrow-right.svg"
-				alt="right arrow"
-				aria-label="next image"
-			/></button
-		>
+	<button class="arrow right" onclick={next} aria-label="Next image"
+		><img
+			src="src/public/images/home-carousel-arrow-right.svg"
+			alt="right arrow"
+			aria-label="next image"
+		/></button
+	>
 
-		<div
-			class="track"
-			style="transform: translateX(calc(-{index * 100}% + {dragging ? currentX : 0}px));"
-		>
-			{#each images as img}
-				<div class="slide">
-					<img class="carousel-image" src={img} alt="" />
-				</div>
-			{/each}
-		</div>
-	</div>
-
-	<div class="dots">
-		{#each images as _, i}
-			<button
-				aria-label="image navigation buttons"
-				class="dot {i === index ? 'active' : ''}"
-				onclick={() => (index = i)}
-			></button>
+	<div
+		class="track"
+		style="transform: translateX(calc(-{index * 100}% + {dragging ? currentX : 0}px));"
+	>
+		{#each images as img}
+			<div class="slide">
+				<img class="carousel-image" src={img} alt="" />
+			</div>
 		{/each}
 	</div>
-</section>
+</div>
+
+<div class="dots">
+	{#each images as _, i}
+		<button
+			aria-label="image navigation buttons"
+			class="dot {i === index ? 'active' : ''}"
+			onclick={() => (index = i)}
+		></button>
+	{/each}
+</div>
 
 <style>
 	.carousel {
 		position: relative;
 		overflow: hidden;
-		height: 469px;
 		touch-action: pan-y;
 		margin-left: -20px;
 		margin-right: -20px;
@@ -114,10 +110,10 @@
 	}
 
 	img {
-		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		display: block;
+		max-width: 900px;
 	}
 
 	.dots {
@@ -144,12 +140,8 @@
 		display: none;
 	}
 
-	h2 {
-		text-transform: none;
-		margin-left: -20px;
-		margin-right: -20px;
-		background-color: white;
-		padding: 40px 0;
+	img[src*='review'] {
+		height: 486px;
 	}
 
 	@media (min-width: 768px) {
@@ -162,7 +154,6 @@
 		}
 
 		img {
-			/* width: 1000px; */
 			height: 100%;
 		}
 

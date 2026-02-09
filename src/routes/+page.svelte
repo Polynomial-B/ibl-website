@@ -1,6 +1,7 @@
 <script>
 	import Carousel from '../components/carousel.svelte';
 	import HomeImages from '../components/home-images.svelte';
+	import HomeReviews from '../components/home-reviews.svelte';
 	import LinkButton from '../components/link-button.svelte';
 </script>
 
@@ -57,14 +58,31 @@
 </section>
 
 <HomeImages />
-<Carousel
-	images={[
-		'src/public/images/home-carousel-1.png',
-		'src/public/images/home-carousel-2.png',
-		'src/public/images/home-carousel-3.png',
-		'src/public/images/home-carousel-4.png'
-	]}
-/>
+<section class="carousel">
+	<h2 class="carousel-header">Whatever your skin needs, we've got the facial for it.</h2>
+	<div class="carousel-mobile">
+		<Carousel
+			images={[
+				'src/public/images/home-carousel-1.png',
+				'src/public/images/home-carousel-2.png',
+				'src/public/images/home-carousel-3.png',
+				'src/public/images/home-carousel-4.png'
+			]}
+		/>
+	</div>
+
+	<div class="carousel-desktop">
+		<Carousel
+			images={[
+				'src/public/images/home-carousel-desktop-1.png',
+				'src/public/images/home-carousel-desktop-2.png',
+				'src/public/images/home-carousel-desktop-3.png',
+				'src/public/images/home-carousel-desktop-4.png'
+			]}
+		/>
+	</div>
+</section>
+<HomeReviews />
 
 <style>
 	.splash {
@@ -188,9 +206,23 @@
 		.link-container__section-two {
 			display: none;
 		}
+		.carousel-mobile {
+			display: none;
+		}
+
+		.carousel-header {
+			text-transform: none;
+			margin-left: -20px;
+			margin-right: -20px;
+			background-color: white;
+			padding: 40px 0;
+		}
 	}
 	@media (max-width: 768px) {
 		.desktop {
+			display: none;
+		}
+		.carousel-desktop {
 			display: none;
 		}
 	}

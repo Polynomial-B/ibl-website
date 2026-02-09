@@ -143,6 +143,7 @@
 		flex-direction: column;
 		gap: 10px;
 		width: 90%;
+		max-width: 500px;
 	}
 
 	.subscribe input {
