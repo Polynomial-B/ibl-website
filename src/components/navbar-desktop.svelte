@@ -52,22 +52,22 @@
 			</div>
 			<div class="col">
 				<h4>ADVANCED SKINCARE</h4>
-				<a href="/facials">Facials</a>
-				<a href="/dermaplaning">Dermaplaning</a>
+				<a href="/facials" onclick={() => close()}>Facials</a>
+				<a href="/dermaplaning" onclick={() => close()}>Dermaplaning</a>
 			</div>
 
 			<div class="col">
 				<h4>AESTHETICS</h4>
-				<a href="/anti-wrinkle">Anti-wrinkle injections</a>
-				<a href="/dermal-filler">Dermal filler</a>
-				<a href="/skin-boosters">Skin boosters</a>
-				<a href="/polynucleotides">Polynucleotides</a>
+				<a href="/anti-wrinkle-injections" onclick={() => close()}>Anti-wrinkle injections</a>
+				<a href="/dermal-filler" onclick={() => close()}>Dermal filler</a>
+				<a href="/skin-boosters" onclick={() => close()}>Skin boosters</a>
+				<a href="/polynucleotides" onclick={() => close()}>Polynucleotides</a>
 			</div>
 
 			<div class="col">
 				<h4>BEAUTY</h4>
-				<a href="/lash-lift">Lash lifts, brows & tints</a>
-				<a href="/waxing">Waxing & hair removal</a>
+				<a href="/lash-lifts-and-tints" onclick={() => close()}>Lash lifts, brows & tints</a>
+				<a href="/waxing-and-hair-removal" onclick={() => close()}>Waxing & hair removal</a>
 			</div>
 			<div class="col"></div>
 		</div>
