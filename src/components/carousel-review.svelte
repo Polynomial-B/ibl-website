@@ -1,15 +1,9 @@
 <script lang="ts">
-	let { images } = $props();
-
+	let { images, slideNumber } = $props();
 	let index = $state(0);
-
 	let startX = 0;
 	let currentX = $state(0);
 	let dragging = $state(false);
-
-	// let startX!: number;
-	// let currentX!: number;
-	// let dragging!: boolean;
 
 	function onPointerDown(e: any) {
 		dragging = true;
@@ -24,19 +18,17 @@
 	function onPointerUp() {
 		if (!dragging) return;
 		dragging = false;
-
 		if (currentX < -50) next();
 		if (currentX > 50) prev();
-
 		currentX = 0;
 	}
 
 	function next() {
-		index = (index + 1) % images.length;
+		index = Math.min(index + 1, images.length - slideNumber);
 	}
 
 	function prev() {
-		index = (index - 1 + images.length) % images.length;
+		index = Math.max(index - 1, 0);
 	}
 </script>
 
@@ -65,7 +57,8 @@
 
 	<div
 		class="track"
-		style="transform: translateX(calc(-{index * 100}% + {dragging ? currentX : 0}px));"
+		style="--slides: {slideNumber};
+		transform: translateX(calc(-{index * (100 / slideNumber)}% + {dragging ? currentX : 0}px));"
 	>
 		{#each images as img}
 			<div class="slide">
@@ -76,11 +69,11 @@
 </div>
 
 <div class="dots">
-	{#each images as _, i}
+	{#each Array(images.length - slideNumber + 1) as _, i}
 		<button
-			aria-label="image navigation buttons"
 			class="dot {i === index ? 'active' : ''}"
 			onclick={() => (index = i)}
+			aria-label="carousel page"
 		></button>
 	{/each}
 </div>
@@ -90,8 +83,7 @@
 		position: relative;
 		overflow: hidden;
 		touch-action: pan-y;
-		margin-left: -20px;
-		margin-right: -20px;
+		margin: 0 -20px 70px;
 	}
 
 	.track {
@@ -107,13 +99,6 @@
 		display: grid;
 		place-items: center;
 		overflow: hidden;
-	}
-
-	img {
-		height: 100%;
-		object-fit: cover;
-		display: block;
-		max-width: 400px;
 	}
 
 	.dots {
@@ -140,9 +125,15 @@
 		display: none;
 	}
 
+	img {
+		height: 486px;
+	}
+
 	@media (min-width: 768px) {
 		.carousel {
 			height: 720px;
+			margin: 0 auto;
+			max-width: 1800px;
 		}
 
 		.slide {
@@ -151,7 +142,7 @@
 
 		img {
 			height: 100%;
-			max-width: 850px;
+			gap: 10px;
 		}
 
 		.arrow {
@@ -183,6 +174,16 @@
 
 		.arrow.right {
 			right: 24px;
+		}
+
+		.track {
+			grid-auto-columns: calc(100% / var(--slides));
+		}
+
+		.track img {
+			object-fit: contain;
+			display: block;
+			max-width: 300px;
 		}
 	}
 </style>

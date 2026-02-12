@@ -82,7 +82,7 @@
 		/>
 	</div>
 </section>
-<HomeReviews />
+<HomeReviews slideNumber />
 
 <style>
 	.splash {
