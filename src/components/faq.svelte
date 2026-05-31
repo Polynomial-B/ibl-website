@@ -20,7 +20,7 @@
 
 <style>
 	section {
-		margin: 30px 0;
+		margin: 0 auto;
 	}
 	details {
 		margin: 12px 0;
