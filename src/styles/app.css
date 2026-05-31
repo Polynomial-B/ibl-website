@@ -100,13 +100,16 @@ article {
 	padding: 10px 0;
 	font-family: 'Raleway', sans-serif;
 	font-size: 15px;
-	font-style: normal;
+	text-wrap: balanced;
+	text-align: justify;
 	font-weight: 500;
 	line-height: 30px;
 }
 
 section {
 	padding: 0 0 10px;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 @media (min-width: 768px) {

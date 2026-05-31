@@ -105,12 +105,12 @@
 
 	.bg-body {
 		position: absolute;
-		left: 0;
-		bottom: -50px;
+		bottom: -10px;
 		z-index: 1;
 		pointer-events: none;
-		left: 50vw;
+		left: 10px;
 		transform: translateX(-55vw);
+		transform: rotate(180deg);
 		z-index: 1;
 	}
 	.accredited-title {
@@ -122,5 +122,14 @@
 		display: block;
 		height: 162px;
 		flex-shrink: 0;
+	}
+
+	@media (min-width: 835px) {
+		.aboutsplash img.bg {
+			left: 10%;
+			top: 60px;
+			transform: translateX(50%);
+			transform: rotate(180deg);
+		}
 	}
 </style>
