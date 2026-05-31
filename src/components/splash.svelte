@@ -31,4 +31,16 @@
 		z-index: 1;
 		pointer-events: none;
 	}
+
+	.splash img.bg {
+		position: absolute;
+		right: auto;
+		bottom: auto;
+		left: 50%;
+		top: 50%;
+		padding-right: 320px;
+		z-index: 1;
+		transform: translate(-50%, -50%) rotate(180deg);
+		pointer-events: none;
+	}
 </style>

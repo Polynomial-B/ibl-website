@@ -7,7 +7,7 @@
 <section class="img">
 	<LinkButton text="MAKE AN APPOINTMENT" />
 	<img class="main" {src} {alt} />
-	<img class="bg" src="src/public/images/dotted-semi-circle.png" alt="dotted semicircle" />
+	<img class="bg" src="src/public/images/dotted-circle.png" alt="dotted semicircle" />
 </section>
 
 <style>
@@ -26,12 +26,10 @@
 
 	.bg {
 		position: absolute;
-		left: 0;
+		left: 30px;
 		bottom: -50px;
 		z-index: 1;
 		pointer-events: none;
-		left: 50vw;
-		transform: translateX(-55vw);
 		z-index: 1;
 	}
 </style>
