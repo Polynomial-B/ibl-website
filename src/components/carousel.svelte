@@ -7,14 +7,14 @@
 	let currentX = $state(0);
 	let dragging = $state(false);
 
-	function onPointerDown(e: any) {
+	function onPointerDown(e: MouseEvent | TouchEvent) {
 		dragging = true;
-		startX = e.clientX ?? e.touches?.[0].clientX;
+		startX = (e as MouseEvent).clientX ?? (e as TouchEvent).touches[0].clientX;
 	}
 
-	function onPointerMove(e: any) {
+	function onPointerMove(e: MouseEvent | TouchEvent) {
 		if (!dragging) return;
-		currentX = (e.clientX ?? e.touches?.[0].clientX) - startX;
+		currentX = ((e as MouseEvent).clientX ?? (e as TouchEvent).touches[0].clientX) - startX;
 	}
 
 	function onPointerUp() {
@@ -42,6 +42,7 @@
 	onpointermove={onPointerMove}
 	onpointerup={onPointerUp}
 	onpointerleave={onPointerUp}
+	role="region"
 >
 	<button class="arrow left" onclick={prev} aria-label="Previous image"
 		><img
@@ -63,7 +64,7 @@
 		class="track"
 		style="transform: translateX(calc(-{index * 100}% + {dragging ? currentX : 0}px));"
 	>
-		{#each images as img}
+		{#each images as img (img)}
 			<div class="slide">
 				<img class="carousel-image" src={img} alt="" />
 			</div>
@@ -72,7 +73,7 @@
 </div>
 
 <div class="dots">
-	{#each images as _, i}
+	{#each images as _, i (i)}
 		<button
 			aria-label="image navigation buttons"
 			class="dot {i === index ? 'active' : ''}"
