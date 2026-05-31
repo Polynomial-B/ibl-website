@@ -1,8 +1,11 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import { PUBLIC_FORMS_KEY } from '$env/static/public';
+</script>
 
 <section>
 	<div class="contact-container">
-		<form class="contact-form">
+		<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+			<input type="hidden" name="access_key" value={PUBLIC_FORMS_KEY} />
 			<label for="name">Full Name</label>
 			<input type="text" id="name" placeholder="" />
 

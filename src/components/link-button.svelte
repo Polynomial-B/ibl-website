@@ -4,6 +4,7 @@
 
 <a
 	class="aside-link book-button"
+	target="_blank"
 	href="https://www.fresha.com/a/insidebeautylondon-shepperton-ashford-13-chessholme-road-th8rk3em"
 	aria-label="book now via Fresha">{text}</a
 >

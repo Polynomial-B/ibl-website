@@ -110,7 +110,7 @@
 	@media (min-width: 1024px) {
 		section {
 			flex-direction: row;
-			gap: 0px;
+			gap: 20px;
 		}
 		.container {
 			padding: 0;

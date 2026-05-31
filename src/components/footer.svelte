@@ -3,12 +3,12 @@
 </script>
 
 <footer>
-	<h2>Stay up to date with our latest offers</h2>
+	<!-- <h2>Stay up to date with our latest offers</h2>
 
 	<div class="subscribe">
 		<input type="email" placeholder="Your email" />
 		<button>SUBSCRIBE</button>
-	</div>
+	</div> -->
 
 	<div class="icons">
 		<a
@@ -66,7 +66,7 @@
 				</defs>
 			</svg>
 		</a>
-		<a class="icon" href="/" aria-label="Follow us on Facebook"
+		<!-- <a class="icon" href="/" aria-label="Follow us on Facebook"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="48"
@@ -87,7 +87,7 @@
 					fill="#645242"
 				/>
 			</svg></a
-		>
+		> -->
 	</div>
 
 	<div class="links">
@@ -102,7 +102,7 @@
 </footer>
 
 <style>
-	h2::before {
+	/* h2::before {
 		content: '';
 		background: #e7ccae;
 		position: absolute;
@@ -123,7 +123,7 @@
 		font-weight: 400;
 		line-height: normal;
 		letter-spacing: -1px;
-	}
+	} */
 
 	footer {
 		width: 100%;
@@ -176,10 +176,23 @@
 		background: #f1f1f1;
 	}
 
+	.icons::before {
+		content: '';
+		background: #e7ccae;
+		position: absolute;
+		top: -10px;
+		left: 50%;
+		width: 100vw;
+		height: 1px;
+		transform: translateX(-50%);
+	}
+
 	.icons {
 		display: flex;
 		gap: 20px;
 		font-size: 1.2rem;
+		position: relative;
+		padding-top: 80px;
 	}
 
 	.links {

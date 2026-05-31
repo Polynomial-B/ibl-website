@@ -1,7 +1,6 @@
 <script>
 	import Carousel from '../components/carousel.svelte';
 	import HomeImages from '../components/home-images.svelte';
-	import HomeReviews from '../components/home-reviews.svelte';
 	import LinkButton from '../components/link-button.svelte';
 </script>
 
@@ -36,7 +35,7 @@
 
 <section class="section-two">
 	<h2>
-		Experience results-driven skincare, aesthetics and beaut<br /> designed for every complexion.
+		Experience results-driven skincare, aesthetics and beauty<br /> designed for every complexion.
 	</h2>
 	<div class="img-wrapper">
 		<div class="img-item">
@@ -82,7 +81,8 @@
 		/>
 	</div>
 </section>
-<HomeReviews slideNumber />
+
+<!-- <HomeReviews slideNumber /> -->
 
 <style>
 	.splash {
@@ -152,8 +152,6 @@
 	}
 
 	.desktop-side {
-		/* position: absolute;
-		left: 0; */
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
@@ -161,10 +159,6 @@
 	}
 
 	.desktop-img-container {
-		/* position: absolute;
-		display: block;
-		right: -16px;
-		top: -22px; */
 		width: clamp(40vw, 50vw, 60vw);
 		height: 100%;
 		overflow: hidden;
@@ -172,7 +166,7 @@
 	.link-container {
 		margin: 0 auto;
 	}
-	@media (min-width: 768px) {
+	@media (min-width: 769px) {
 		.mobile {
 			display: none;
 		}
@@ -183,22 +177,24 @@
 		}
 		.splash img.bg {
 			position: absolute;
-			top: 0;
-			left: -66px;
+			bottom: 0;
+			left: 139px;
 			z-index: 1;
 			pointer-events: none;
-			transform: rotateY(0deg);
+			transform: rotateY(180deg);
 		}
 		.main {
 			position: relative;
 		}
 
+		.desktop {
+			max-width: 800px;
+		}
+
 		.section-two {
-			margin-left: -20px;
-			margin-right: -20px;
 			background-color: white;
-			margin-bottom: 50px;
 			padding: 40px 0;
+			margin: 20px auto 50px;
 		}
 		.img-wrapper {
 			flex-direction: row;
@@ -218,6 +214,7 @@
 			padding: 40px 0;
 		}
 	}
+
 	@media (max-width: 768px) {
 		.desktop {
 			display: none;

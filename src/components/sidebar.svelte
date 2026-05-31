@@ -52,7 +52,7 @@
 					onclick={() => (treatment = 'treatments')}>Treatments</button
 				>
 				{@render link('/about', 'About us')}
-				{@render link('/gallery', 'Gallery')}
+				<!-- {@render link('/gallery', 'Gallery')} -->
 				{@render link('/contact', 'Contact')}
 			</div>
 

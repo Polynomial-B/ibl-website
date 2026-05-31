@@ -7,10 +7,6 @@
 	let currentX = $state(0);
 	let dragging = $state(false);
 
-	// let startX!: number;
-	// let currentX!: number;
-	// let dragging!: boolean;
-
 	function onPointerDown(e: any) {
 		dragging = true;
 		startX = e.clientX ?? e.touches?.[0].clientX;
@@ -163,8 +159,8 @@
 			transform: translateY(-50%);
 			border-radius: 50%;
 			border: none;
-			background: rgba(255, 255, 255, 0.9);
-			color: #111;
+			background: rgba(255, 255, 255, 0.5);
+			color: black;
 			cursor: pointer;
 			z-index: 3;
 			transition:

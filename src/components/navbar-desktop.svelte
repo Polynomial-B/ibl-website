@@ -39,7 +39,7 @@
 		>
 			<button class="treatments-btn" onclick={() => (open = !open)}> Treatments </button>
 		</li>
-		<li><a href="/gallery">Gallery</a></li>
+		<!-- <li><a href="/gallery">Gallery</a></li> -->
 		<li><a href="/contact">Contact</a></li>
 	</ul>
 	<div class="book">
@@ -119,6 +119,10 @@
 		margin-left: 24px;
 	}
 
+	.submenu:focus-visible {
+		outline: 2px solid #000;
+		background-color: rgba(0, 0, 0, 0.05);
+	}
 	.submenu {
 		position: absolute;
 		top: 80px;
