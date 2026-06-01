@@ -1,1 +1,16 @@
-<a href="/"><img src="src/public/images/logo.png" aria-label="home" alt="half mandala logo" /></a>
+<script>
+	let loaded = false;
+</script>
+
+<a href="/">
+	<img
+		src="/images/logo.png"
+		alt="half mandala logo"
+		width="200"
+		height="118"
+		loading="lazy"
+		style:opacity={loaded ? 1 : 0}
+		style:transition="opacity 0.2s"
+		onload={() => (loaded = true)}
+	/>
+</a>

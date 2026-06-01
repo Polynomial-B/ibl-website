@@ -6,7 +6,7 @@
 
 <h1>Polynucleotides treatment</h1>
 
-<Splash src="src/public/images/polynucleotides.png" alt="syringe on peach background" />
+<Splash src="/images/polynucleotides.png" alt="syringe on peach background" />
 
 <section>
 	<h2>regenerate & restore.</h2>
@@ -45,7 +45,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/polynucleotides-body.png" alt="eye wrinkles before and after" />
+<Imagebody src="/images/polynucleotides-body.png" alt="eye wrinkles before and after" />
 
 <Faq
 	prep="Avoid alcohol and blood-thinning medications or supplements (like aspirin, ibuprofen, or vitamin E) for 24–48 hours beforehand to minimise the risk of bruising. Arrive with clean skin and no makeup."

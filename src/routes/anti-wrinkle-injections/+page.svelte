@@ -6,7 +6,7 @@
 
 <h1>Anti-wrinkle injections</h1>
 
-<Splash src="src/public/images/anti-wrinkle.png" alt="syringe and ampules on white background" />
+<Splash src="/images/anti-wrinkle.png" alt="syringe and ampules on white background" />
 
 <section>
 	<h2>refresh. smooth. rejuvenate.</h2>
@@ -39,7 +39,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/anti-wrinkle-body.png" alt="forehead before and after" />
+<Imagebody src="/images/anti-wrinkle-body.png" alt="forehead before and after" />
 
 <Faq
 	prep="Before your procedure, it’s essential to follow a few simple steps to ensure the best possible results. Avoid blood-thinning or anti-inflammatory medications, alcohol, and supplements like aspirin or fish oil at least 24 hours prior to your treatment to minimise bruising. Arriving at your appointment with clean skin, well-rested and hydrated will also help your skin respond better to the anti-wrinkle injections."

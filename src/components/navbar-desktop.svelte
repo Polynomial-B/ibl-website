@@ -17,7 +17,7 @@
 	<div class="logo">
 		<a href="/"
 			><img
-				src="src/public/images/logo.png"
+				src="/images/logo.png"
 				aria-label="home"
 				alt="half mandala logo"
 				class="logo-small"
@@ -69,7 +69,6 @@
 				<a href="/lash-lifts-and-tints" onclick={() => close()}>Lash lifts, brows & tints</a>
 				<a href="/waxing-and-hair-removal" onclick={() => close()}>Waxing & hair removal</a>
 			</div>
-			<div class="col"></div>
 		</div>
 	{/if}
 </nav>
@@ -103,7 +102,6 @@
 
 	.treatments-btn {
 		background: none;
-		border: none;
 		font: inherit;
 		cursor: pointer;
 	}
@@ -118,11 +116,15 @@
 		background-color: #e7ccae;
 		margin-left: 24px;
 	}
-
+	.treatments-btn:focus-visible {
+		outline: auto;
+		outline-offset: 2px;
+	}
 	.submenu:focus-visible {
 		outline: 2px solid #000;
 		background-color: rgba(0, 0, 0, 0.05);
 	}
+
 	.submenu {
 		position: absolute;
 		top: 80px;

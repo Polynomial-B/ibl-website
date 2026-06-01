@@ -1,6 +1,5 @@
 <script>
 	import { PUBLIC_KEY } from '$env/static/public';
-	import ContactForm from '../../components/contact-form.svelte';
 </script>
 
 <h1>Contact us</h1>

@@ -1,18 +1,8 @@
-<script lang="ts">
-	import Carousel from '../../components/carousel.svelte';
-	const images: string[] = [
-		'src/public/images/about-profile.png',
-		'src/public/images/about-circles.png',
-		'src/public/images/about-profile.png',
-		'src/public/images/about-circles.png'
-	];
-</script>
-
 <section>
 	<h1>The face behind <span>the</span> brand</h1>
 	<div class="aboutsplash">
-		<img class="main" src="src/public/images/about-profile.png" alt="woman smiling" />
-		<img class="bg" src="src/public/images/about-circles.png" alt="dotted brown circle underlay" />
+		<img class="main" src="/images/about-profile.png" alt="woman smiling" />
+		<img class="bg" src="/images/about-circles.png" alt="dotted brown circle underlay" />
 	</div>
 	<h2>ABOUT ME</h2>
 	<p>
@@ -50,15 +40,14 @@
 </section>
 
 <section class="img-body">
-	<img class="main-body" src="src/public/images/about-body.png" alt="person receiving treatment" />
-	<img class="bg-body" src="src/public/images/dotted-circle-full.png" alt="dotted circle" />
+	<img class="main-body" src="/images/about-body.png" alt="person receiving treatment" />
+	<img class="bg-body" src="/images/dotted-circle-full.png" alt="dotted circle" />
 </section>
 
 <section>
 	<h1 class="accredited-title">Accredited <span>and</span> trusted by</h1>
-	<img class="accredited" src="src/public/images/logo-cpd.png" alt="" />
-	<img class="accredited" src="src/public/images/logo-ctia.png" alt="" />
-	<!-- <Carousel {images} /> -->
+	<img class="accredited" src="/images/logo-cpd.png" alt="" />
+	<img class="accredited" src="/images/logo-ctia.png" alt="" />
 </section>
 
 <style>

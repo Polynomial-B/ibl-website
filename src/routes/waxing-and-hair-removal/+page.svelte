@@ -6,7 +6,7 @@
 
 <h1>Waxing <span>and</span> hair removal</h1>
 
-<Splash src="src/public/images/waxing.png" alt="pink wax close-up" />
+<Splash src="/images/waxing.png" alt="pink wax close-up" />
 
 <section>
 	<h2>hair-free. care-free.</h2>
@@ -35,7 +35,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/waxing-body.png" alt="waxed and unwaxed leg" />
+<Imagebody src="/images/waxing-body.png" alt="waxed and unwaxed leg" />
 
 <Faq
 	prep="Ensure the area is clean, dry, and free from lotions or oils. If you normally shave, leave at least 2 weeks before having a waxing treatment to allow the hair to grow long enough for effective removal. If you have sensitive skin or it’s your first wax, please let me know ahead of your appointment."

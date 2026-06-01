@@ -6,7 +6,7 @@
 
 <h1>Advanced facials <span>and</span> skincare</h1>
 
-<Splash src="src/public/images/facials.png" alt="Medik8 bakuchiol pipette and bottle" />
+<Splash src="/images/facials.png" alt="Medik8 bakuchiol pipette and bottle" />
 
 <section>
 	<h2>exceptional skin starts here.</h2>
@@ -54,7 +54,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/facials-body.png" alt="person receiving rose facial treatment" />
+<Imagebody src="/images/facials-body.png" alt="person receiving rose facial treatment" />
 
 <Faq
 	prep="Avoid active skincare (retinoids, acids) for 3–5 days before your appointment and arrive with clean skin."

@@ -3,7 +3,7 @@
 
 {#snippet image(img: string, alt: string, title: string, textbold: string, textbody: string)}
 	<article class="container">
-		<img src="src/public/images/{img}" {alt} />
+		<img src="/images/{img}" {alt} />
 		<div class="img-text">
 			<h2>{title}</h2>
 
@@ -36,9 +36,9 @@
 		'Medical-grade facials, skin peels, hydro-treatments and Korean skincare.'
 	)}
 
-	<img class="bg-top" src="src/public/images/home-circle-full.png" alt="brown dotted circle" />
-	<img class="bg-middle" src="src/public/images/home-circle-full.png" alt="brown dotted circle" />
-	<img class="bg-bottom" src="src/public/images/home-circle-full.png" alt="brown dotted circle" />
+	<img class="bg-top" src="/images/home-circle-full.png" alt="brown dotted circle" />
+	<img class="bg-middle" src="/images/home-circle-full.png" alt="brown dotted circle" />
+	<img class="bg-bottom" src="/images/home-circle-full.png" alt="brown dotted circle" />
 </section>
 
 <style>

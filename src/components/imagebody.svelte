@@ -7,7 +7,7 @@
 <section class="img">
 	<LinkButton text="MAKE AN APPOINTMENT" />
 	<img class="main" {src} {alt} />
-	<img class="bg" src="src/public/images/dotted-circle.png" alt="dotted semicircle" />
+	<img class="bg" src="/images/dotted-circle.png" alt="dotted semicircle" />
 </section>
 
 <style>

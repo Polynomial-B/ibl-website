@@ -6,7 +6,7 @@
 
 <h1>Dermaplaning treatment</h1>
 
-<Splash src="src/public/images/dermaplaning.png" alt="peach with dermaplane blade" />
+<Splash src="/images/dermaplaning.png" alt="peach with dermaplane blade" />
 
 <section>
 	<h2>Instant glow. ultra-smooth skin.</h2>
@@ -41,10 +41,7 @@
 	</p>
 </section>
 
-<Imagebody
-	src="src/public/images/dermaplaning-body.png"
-	alt="face receiving dermaplane treatment"
-/>
+<Imagebody src="/images/dermaplaning-body.png" alt="face receiving dermaplane treatment" />
 
 <Faq
 	prep="Avoid active skincare (retinoids, exfoliating acids) for 3–5 days beforehand. Arrive with clean skin, free from makeup."

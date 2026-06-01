@@ -19,18 +19,18 @@
 		<div class="desktop-img-container">
 			<img
 				class="main desktop"
-				src="src/public/images/main-splash-desktop.png"
+				src="/images/main-splash-desktop.png"
 				alt="person receiving rose facial treatment"
 			/>
 		</div>
 	</div>
 	<img
 		class="main mobile"
-		src="src/public/images/main-splash.png"
+		src="/images/main-splash.png"
 		alt="person receiving rose facial treatment"
 	/>
 
-	<img class="bg" src="src/public/images/about-circles.png" alt="dotted brown circle underlay" />
+	<img class="bg" src="/images/about-circles.png" alt="dotted brown circle underlay" />
 </section>
 
 <section class="section-two">
@@ -39,15 +39,15 @@
 	</h2>
 	<div class="img-wrapper">
 		<div class="img-item">
-			<img src="src/public/images/homeicon-science.svg" alt="" />
+			<img src="/images/homeicon-science.svg" alt="" />
 			<div>Scientifically proven & dermatologist-developed</div>
 		</div>
 		<div class="img-item">
-			<img src="src/public/images/homeicon-heart.svg" alt="" />
+			<img src="/images/homeicon-heart.svg" alt="" />
 			<div>Treatments for all skin types</div>
 		</div>
 		<div class="img-item">
-			<img src="src/public/images/homeicon-smile.svg" alt="" />
+			<img src="/images/homeicon-smile.svg" alt="" />
 			<div>Promoting skincare and self-confidence</div>
 		</div>
 	</div>
@@ -62,10 +62,10 @@
 	<div class="carousel-mobile">
 		<Carousel
 			images={[
-				'src/public/images/home-carousel-1.png',
-				'src/public/images/home-carousel-2.png',
-				'src/public/images/home-carousel-3.png',
-				'src/public/images/home-carousel-4.png'
+				'/images/home-carousel-1.png',
+				'/images/home-carousel-2.png',
+				'/images/home-carousel-3.png',
+				'/images/home-carousel-4.png'
 			]}
 		/>
 	</div>
@@ -73,10 +73,10 @@
 	<div class="carousel-desktop">
 		<Carousel
 			images={[
-				'src/public/images/home-carousel-desktop-1.png',
-				'src/public/images/home-carousel-desktop-2.png',
-				'src/public/images/home-carousel-desktop-3.png',
-				'src/public/images/home-carousel-desktop-4.png'
+				'/images/home-carousel-desktop-1.png',
+				'/images/home-carousel-desktop-2.png',
+				'/images/home-carousel-desktop-3.png',
+				'/images/home-carousel-desktop-4.png'
 			]}
 		/>
 	</div>
@@ -90,12 +90,17 @@
 		margin-top: 30px;
 		position: relative;
 	}
+
+	.mobile {
+		width: 360px;
+	}
 	.main {
 		position: absolute;
 		z-index: 2;
 		pointer-events: none;
 		left: 50%;
 		transform: translateX(-50%);
+		border-radius: 0 0 400px 400px;
 	}
 
 	.splash img.bg {
@@ -146,9 +151,10 @@
 		text-transform: none;
 	}
 	.desktop {
-		height: 600px;
+		height: 550px;
 		display: flex;
 		margin: 0 auto;
+		object-fit: cover;
 	}
 
 	.desktop-side {
@@ -158,8 +164,13 @@
 		justify-content: center;
 	}
 
+	.desktop-side h1 {
+		font-size: clamp(38px, 5vw, 46px);
+		max-width: 322px;
+		min-width: 318px;
+	}
+
 	.desktop-img-container {
-		width: clamp(40vw, 50vw, 60vw);
 		height: 100%;
 		overflow: hidden;
 	}
@@ -176,12 +187,9 @@
 			margin: 0 auto;
 		}
 		.splash img.bg {
-			position: absolute;
-			bottom: 0;
-			left: 139px;
-			z-index: 1;
-			pointer-events: none;
-			transform: rotateY(180deg);
+			bottom: 40px;
+			right: -90px;
+			transform: rotate(30deg);
 		}
 		.main {
 			position: relative;

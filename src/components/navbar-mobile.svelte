@@ -19,7 +19,7 @@
 			onclick={toggleSidebar}
 			bind:this={menuButtonRef}
 		>
-			<img src="src/public/images/menu.svg" alt="" class="menu-icon" />
+			<img src="/images/menu.svg" alt="" class="menu-icon" />
 		</button>
 	</div>
 	<Sidebar {isActive} {closeSidebar} {menuButtonRef} {asideRef} />
@@ -55,6 +55,7 @@
 		cursor: pointer;
 		z-index: 11;
 	}
+
 	@media (min-width: 769px) {
 		nav {
 			display: none;

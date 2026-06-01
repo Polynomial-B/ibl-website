@@ -6,7 +6,7 @@
 
 <h1>Lash lifts, brows <span>and</span> tints</h1>
 
-<Splash src="src/public/images/eyebrows.png" alt="eyebrow being tinted" />
+<Splash src="/images/eyebrows.png" alt="eyebrow being tinted" />
 
 <section>
 	<h2>shape. define. enhance.</h2>
@@ -42,7 +42,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/eyebrows-body.png" alt="tinted eyebrows" />
+<Imagebody src="/images/eyebrows-body.png" alt="tinted eyebrows" />
 
 <Faq
 	prep="If it’s your first time having a lash or brow tint, you’ll need a patch test at least 24 hours prior to your appointment. On the day, arrive with clean lashes and brows, free from makeup or oils, and avoid waterproof mascara for 24 hours beforehand."

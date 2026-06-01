@@ -6,7 +6,7 @@
 
 <h1>Dermal filler treatment</h1>
 
-<Splash src="src/public/images/dermal-filler.png" alt="syringe on white background" />
+<Splash src="/images/dermal-filler.png" alt="syringe on white background" />
 
 <section>
 	<h2>restore. rebalance. enhance.</h2>
@@ -40,7 +40,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/dermal-filler-body.png" alt="before and after of lips" />
+<Imagebody src="/images/dermal-filler-body.png" alt="before and after of lips" />
 
 <Faq
 	prep="Before your procedure, it’s essential to follow a few simple steps to ensure the best possible results. Avoid blood-thinning or anti-inflammatory medications, alcohol, and supplements like aspirin or fish oil at least 24 hours prior to your treatment to minimise bruising. Arrive with clean skin and avoid wearing makeup on the lower face if possible. If you’re prone to cold sores and are having lip filler, let me know in advance so we can take precautions."

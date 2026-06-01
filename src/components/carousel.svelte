@@ -46,7 +46,7 @@
 >
 	<button class="arrow left" onclick={prev} aria-label="Previous image"
 		><img
-			src="src/public/images/home-carousel-arrow-left.svg"
+			src="/images/home-carousel-arrow-left.svg"
 			alt="left arrow"
 			aria-label="previous image"
 		/></button
@@ -54,7 +54,7 @@
 
 	<button class="arrow right" onclick={next} aria-label="Next image"
 		><img
-			src="src/public/images/home-carousel-arrow-right.svg"
+			src="/images/home-carousel-arrow-right.svg"
 			alt="right arrow"
 			aria-label="next image"
 		/></button

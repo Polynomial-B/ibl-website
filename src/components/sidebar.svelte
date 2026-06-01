@@ -107,7 +107,6 @@
 	}
 
 	.title-wrapper {
-		padding-right: 10dvw;
 		display: flex;
 		justify-content: center;
 		align-content: flex-end;
@@ -162,7 +161,7 @@
 
 	.menu-header {
 		color: #5b4c3f;
-		padding: 18px 0px 17px 82px;
+		padding: 18px 0 17px 0;
 		font-family: Raleway;
 		font-size: 18px;
 		font-style: normal;

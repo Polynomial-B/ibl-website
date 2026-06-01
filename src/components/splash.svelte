@@ -4,7 +4,7 @@
 
 <div class="splash">
 	<img class="main" {src} {alt} />
-	<img class="bg" src="src/public/images/dotted-circle.png" alt="dotted brown circle underlay" />
+	<img class="bg" src="/images/dotted-circle.png" alt="dotted brown circle underlay" />
 </div>
 
 <style>

@@ -6,7 +6,7 @@
 
 <h1>Skin booster treatment</h1>
 
-<Splash src="src/public/images/skin-booster.png" alt="water droplets on turquoise background" />
+<Splash src="/images/skin-booster.png" alt="water droplets on turquoise background" />
 
 <section>
 	<h2>hydrate & illuminate.</h2>
@@ -43,7 +43,7 @@
 	</p>
 </section>
 
-<Imagebody src="src/public/images/skin-booster-body.png" alt="neck before and after" />
+<Imagebody src="/images/skin-booster-body.png" alt="neck before and after" />
 
 <Faq
 	prep="Avoid alcohol and blood-thinning medications or supplements (like aspirin, ibuprofen, or vitamin E) for 24–48 hours beforehand to minimise the risk of bruising. Arrive with clean skin and no makeup."
