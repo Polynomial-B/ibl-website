@@ -36,5 +36,3 @@
 	{@render children?.()}
 </main>
 <Footer />
-
-export const prerender = true;
