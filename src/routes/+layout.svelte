@@ -37,5 +37,4 @@
 </main>
 <Footer />
 
-<style>
-</style>
+export const prerender = true;
