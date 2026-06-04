@@ -8,7 +8,6 @@
 </script>
 
 <section class="splash">
-	<!-- Background image – now behind everything -->
 	<img class="bg" src="/images/about-circles.png" alt="dotted brown circle underlay" />
 
 	<div class="desktop">
@@ -24,7 +23,7 @@
 		</div>
 		<div class="desktop-img-container">
 			{#if !desktopLoaded}
-				<div class="subtle-placeholder desktop-placeholder"></div>
+				<div class="image-placeholder desktop-placeholder"></div>
 			{/if}
 			<img
 				class="main desktop"
@@ -38,7 +37,7 @@
 
 	<div class="mobile-wrapper">
 		{#if !mobileLoaded}
-			<div class="subtle-placeholder mobile-placeholder"></div>
+			<div class="image-placeholder mobile-placeholder"></div>
 		{/if}
 		<img
 			class="main mobile"
@@ -168,7 +167,7 @@
 		height: auto;
 	}
 
-	.subtle-placeholder {
+	.image-placeholder {
 		position: absolute;
 		top: 0;
 		left: 50%;
