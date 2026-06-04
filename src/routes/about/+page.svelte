@@ -1,7 +1,25 @@
+<script lang="ts">
+	let imageLoaded = $state(false);
+	function handleImageLoad() {
+		imageLoaded = true;
+	}
+</script>
+
 <section>
 	<h1>The face behind <span>the</span> brand</h1>
 	<div class="aboutsplash">
-		<img class="main" src="/images/about-profile.png" alt="woman smiling" />
+		<div class="main-wrapper">
+			{#if !imageLoaded}
+				<div class="image-placeholder"></div>
+			{/if}
+			<img
+				class="main"
+				class:loaded={imageLoaded}
+				src="/images/about-profile.png"
+				alt="woman smiling"
+				onload={handleImageLoad}
+			/>
+		</div>
 		<img class="bg" src="/images/about-circles.png" alt="dotted brown circle underlay" />
 	</div>
 	<h2>ABOUT ME</h2>
@@ -60,21 +78,60 @@
 		justify-content: center;
 	}
 
+	.main-wrapper {
+		position: relative;
+		display: inline-block;
+		height: 350px;
+		width: auto;
+	}
+
 	.aboutsplash img.main {
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		height: 350px;
 		background: lightgray 50% / cover no-repeat;
 		border-radius: 0 0 150px 150px;
 		border: 2px solid white;
+		opacity: 0;
+		transition: opacity 0.4s ease-out;
+	}
+
+	.aboutsplash img.main.loaded {
+		opacity: 1;
 	}
 
 	.aboutsplash img.bg {
 		position: absolute;
 		top: 0;
 		left: -16px;
-		z-index: 1;
+		z-index: 0;
 		pointer-events: none;
+	}
+
+	.image-placeholder {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 0 0 150px 150px;
+		background-color: rgba(0, 0, 0, 0.04);
+		backdrop-filter: blur(2px);
+		pointer-events: none;
+		z-index: 2;
+		animation: softPulse 1.8s ease-in-out infinite;
+	}
+
+	@keyframes softPulse {
+		0% {
+			background-color: rgba(0, 0, 0, 0.02);
+		}
+		50% {
+			background-color: rgba(0, 0, 0, 0.07);
+		}
+		100% {
+			background-color: rgba(0, 0, 0, 0.02);
+		}
 	}
 
 	.img-body {

@@ -8,7 +8,6 @@
 		alt="half mandala logo"
 		width="200"
 		height="118"
-		loading="lazy"
 		style:opacity={loaded ? 1 : 0}
 		style:transition="opacity 0.2s"
 		onload={() => (loaded = true)}
