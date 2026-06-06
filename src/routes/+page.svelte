@@ -5,7 +5,12 @@
 
 	let desktopLoaded = $state(false);
 	let mobileLoaded = $state(false);
+	import { homepageSchema } from '../schemas/metadata-schema';
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(homepageSchema)}</script>`}
+</svelte:head>
 
 <section class="splash">
 	<img class="bg" src="/images/about-circles.png" alt="dotted brown circle underlay" />

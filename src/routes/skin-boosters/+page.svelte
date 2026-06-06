@@ -2,7 +2,12 @@
 	import Faq from '../../components/faq.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
+	import { skinBoostersSchema } from '../../schemas/metadata-schema';
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(skinBoostersSchema)}</script>`}
+</svelte:head>
 
 <h1>Skin booster treatment</h1>
 

@@ -2,7 +2,12 @@
 	import Faq from '../../components/faq.svelte';
 	import Imagebody from '../../components/imagebody.svelte';
 	import Splash from '../../components/splash.svelte';
+	import { antiWrinkleSchema } from '../../schemas/metadata-schema';
 </script>
+
+<svelte:head>
+	{@html `<script type="application/ld+json">${JSON.stringify(antiWrinkleSchema)}</script>`}
+</svelte:head>
 
 <h1>Anti-wrinkle injections</h1>
 
