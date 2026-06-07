@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(waxingSchema)}</script>`}
+	<title>Waxing and Hair Removal | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Waxing <span>and</span> hair removal</h1>

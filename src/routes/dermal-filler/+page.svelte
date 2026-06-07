@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(dermalFillerSchema)}</script>`}
+	<title>Dermal Filler Treatment | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Dermal filler treatment</h1>

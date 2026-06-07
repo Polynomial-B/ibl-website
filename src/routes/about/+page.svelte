@@ -5,6 +5,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>About Us | Inside Beauty London</title>
+</svelte:head>
+
 <section>
 	<h1>The face behind <span>the</span> brand</h1>
 	<div class="aboutsplash">

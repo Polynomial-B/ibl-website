@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(polynucleotidesSchema)}</script>`}
+	<title>Polynucleotides Treatment | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Polynucleotides treatment</h1>

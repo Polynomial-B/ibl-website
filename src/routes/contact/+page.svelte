@@ -2,6 +2,10 @@
 	import { PUBLIC_KEY } from '$env/static/public';
 </script>
 
+<svelte:head>
+	<title>Contact Us | Inside Beauty London</title>
+</svelte:head>
+
 <h1>Contact us</h1>
 
 <!-- <ContactForm /> -->

@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(lashBrowSchema)}</script>`}
+	<title>Lash Lifts and Tints | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Lash lifts, brows <span>and</span> tints</h1>

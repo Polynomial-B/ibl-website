@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(dermaplaningSchema)}</script>`}
+	<title>Dermaplaning Treatment | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Dermaplaning treatment</h1>

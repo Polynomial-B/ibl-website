@@ -10,6 +10,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(homepageSchema)}</script>`}
+	<title>Homepage | Inside Beauty London</title>
 </svelte:head>
 
 <section class="splash">

@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(skinBoostersSchema)}</script>`}
+	<title>Skin Booster Treatment | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Skin booster treatment</h1>

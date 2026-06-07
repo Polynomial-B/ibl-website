@@ -136,7 +136,7 @@
 		gap: 30px;
 	}
 
-	.subscribe {
+	/* .subscribe {
 		color: #819e80;
 		font-weight: 600;
 		display: flex;
@@ -174,7 +174,7 @@
 
 	.subscribe button:hover {
 		background: #f1f1f1;
-	}
+	} */
 
 	.icons::before {
 		content: '';

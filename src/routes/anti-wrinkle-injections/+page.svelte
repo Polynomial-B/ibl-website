@@ -7,6 +7,7 @@
 
 <svelte:head>
 	{@html `<script type="application/ld+json">${JSON.stringify(antiWrinkleSchema)}</script>`}
+	<title>Anti-wrinkle Injections | Inside Beauty London</title>
 </svelte:head>
 
 <h1>Anti-wrinkle injections</h1>
